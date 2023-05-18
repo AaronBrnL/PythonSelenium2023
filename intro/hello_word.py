@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-chrome_driver_path = ".drivers/chromedriver"
+chrome_driver_path = "/Users/aaronbrn/Documents/PythonSelenium2023/drivers/chromedriver"
 url = "https://qamindslab.com/"
 
 service = Service(chrome_driver_path)
@@ -10,6 +10,3 @@ driver = webdriver.Chrome(service=service)
 driver.get(url)
 time.sleep(3)
 driver.quit()
-
-
-
