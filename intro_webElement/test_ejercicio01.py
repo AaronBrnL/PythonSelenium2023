@@ -1,19 +1,14 @@
-import time
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-CHROME_DRIVER_PATH = "/Users/aaronbrn/Documents/PythonSelenium2023/drivers/chromedriver"
-CHROME_SERVICE = Service(CHROME_DRIVER_PATH)
+from factory.webdriver_factory import get_driver
+
 URL = "https://laboratorio.qaminds.com/"
 
 
 class TestLaboratorioQAMinds:
 
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=CHROME_SERVICE)
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(15)
+        self.driver = get_driver()
         self.driver.get(URL)
 
     def test_search_iphone(self):

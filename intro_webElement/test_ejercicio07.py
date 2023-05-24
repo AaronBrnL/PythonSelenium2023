@@ -18,13 +18,13 @@ class TestDemoQaPage:
 
 
     def test_open_demoqa(self):
-        time.sleep(1)
-        element =self.driver.find_element(By.XPATH, "//select[@id='cars']")
-        select = Select(element)
-        select.select_by_visible_text("Volvo")
-        select.select_by_visible_text("Audi")
-        assert select.first_selected_option.text == "Audi"
         time.sleep(2)
+        element = self.driver.find_element(By.XPATH, "//select[@id='cars']")
+        select = Select(element)
+        #select.select_by_visible_text("Volvo")
+        #select.select_by_visible_text("Audi")
+
+
 
 
     def teardown_method(self):

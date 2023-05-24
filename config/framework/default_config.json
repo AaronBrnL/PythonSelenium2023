@@ -1,7 +1,7 @@
 {
   "browser_name": "chrome",
   "implicit_wait": 10,
-  "drivers_path": "./driver/chromedriver.exe",
+  "drivers_path": "/Users/aaronbrn/Documents/PythonSelenium2023/drivers/chromedriver",
   "maximize": true,
   "incognito": true,
   "headless": {
