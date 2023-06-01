@@ -21,8 +21,8 @@ class TestDemoQaPage:
         time.sleep(2)
         element = self.driver.find_element(By.XPATH, "//select[@id='cars']")
         select = Select(element)
-        #select.select_by_visible_text("Volvo")
-        #select.select_by_visible_text("Audi")
+        select.select_by_visible_text("Volvo")
+        select.select_by_visible_text("Audi")
 
 
 

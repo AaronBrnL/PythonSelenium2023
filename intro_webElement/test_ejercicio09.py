@@ -29,7 +29,7 @@ class TestLaboratorioQAMinds:
     def __find_text(self, by: By,value:str, text:str):
         return self.wait_driver.until(EC.text_to_be_present_in_element((by, value), text))
 
-    def test_download_and_close(self):
+    def test_check_message(self):
         download_btn = self.__find_clickeable_element(By.XPATH,"//button[@id='downloadButton']")
         download_btn.click()
         self.__find_text(By.XPATH, "//div[@class='progress-label']", "Complete!")
