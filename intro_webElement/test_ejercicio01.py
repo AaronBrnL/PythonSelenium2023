@@ -1,5 +1,10 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-
 from factory.webdriver_factory import get_driver
 
 URL = "https://laboratorio.qaminds.com/"

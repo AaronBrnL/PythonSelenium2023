@@ -26,6 +26,19 @@ class TestLandingPage:
         assert macbook_link.text == "MacBook", "El link debe contener el nombre MacBook"
         self.__find_text(By.XPATH, "//body//div[@id='common-home']//div[@class='row']//div[@class='row']//div[1]//div[1]//div[2]","$602.00")
 
+        iphone_link =self.driver.find_element(By.XPATH, "//a[normalize-space()='iPhone']")
+        assert iphone_link.text == "iPhone", "El link debe contener el nombre Iphone"
+        self.__find_text(By.XPATH,"//body//div[@id='common-home']//div[@class='row']//div[@class='row']//div[2]//div[1]//div[2]//p[2]","$123.20")
+
+        apple_Cinema_link = self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(3) div:nth-child(1) div:nth-child(2) h4:nth-child(1) a:nth-child(1)")
+        assert apple_Cinema_link.text == 'Apple Cinema 30"', "El link debe contener el nombre Apple Cinema 30"
+        self.__find_text(By.XPATH, "//span[normalize-space()='$110.00']", "$110.00")
+
+        canon_link = self.driver.find_element(By.XPATH, "//a[normalize-space()='Canon EOS 5D']")
+        assert canon_link.text == "Canon EOS 5D", "El link debe contener el nombre Canon EOS 5D"
+        self.__find_text(By.XPATH, "//span[normalize-space()='$98.00']", "$98.00")
+
+
 
     def teardown_method(self):
         self.driver.quit()
